@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/layouts/header/Header";
+import Footer from "./components/layouts/footer/Footer";
+import { ConfigProvider, theme } from "antd";
+import "./styles/main.css";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider theme={{
+      algorithm: theme.defaultAlgorithm,
+      token: {
+        colorPrimary: "#ff1a1a",
+        borderRadius: 8,
+        colorBgContainer: "#1a1a1a",
+        colorBgElevated: "#262626",
+        fontFamily: "Inter, sans-serif",
+      },
+    }}>
+      <div className="min-h-screen bg-white flex flex-col">
+        <Header/>
+        <Footer />
+      </div>
+    </ConfigProvider>
   );
 }
 
