@@ -1,15 +1,8 @@
 import React from "react";
 import { Select, Typography } from "antd";
-import { DropDownOptions } from "../../../domain/types/types";
+import { DropDownOptions, FilterSelectProps } from "../../../domain/types/types";
 
 const { Text } = Typography;
-
-interface FilterSelectProps {
-  title: string;
-  options: DropDownOptions[];
-  value: string[];
-  onChange: (values: string[]) => void;
-}
 
 export const FilterSelect: React.FC<FilterSelectProps> = React.memo(
   ({ title, options, value, onChange }) => (
