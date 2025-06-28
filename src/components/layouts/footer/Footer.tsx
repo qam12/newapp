@@ -29,7 +29,7 @@ function Footer() {
         </Space>
         <div className="text-center md:text-right">
           <Text className="text-black text-sm font-sans">
-            ©2025, Designed and Developed by Qamber.
+            ©2025, Developed by Qamber.
           </Text>
         </div>
       </div>
