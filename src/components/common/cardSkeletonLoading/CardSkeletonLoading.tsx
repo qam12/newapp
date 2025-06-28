@@ -18,7 +18,7 @@ const CardSkeletonLoading: React.FC<NewsArticleCardSkeletonProps> = ({ count = 8
               <Skeleton.Button active size="small" style={{ width: 100 }} />
               <Skeleton.Button active size="small" style={{ width: 100 }} />
             </div>
-            
+
             <Skeleton.Button active size="small" style={{ width: 100 }} />
           </div>
         </Card>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Select, Typography } from "antd";
-import { DropDownOptions, FilterSelectProps } from "../../../domain/types/types";
+import { FilterSelectProps } from "../../../domain/types/types";
 
 const { Text } = Typography;
 

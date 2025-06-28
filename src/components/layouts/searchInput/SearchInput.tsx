@@ -8,7 +8,7 @@ const SearchInput: React.FC = () => {
 
   return (
     <div className="flex items-center gap-4">
-      <div className="w-72 md:w-96 h-10 flex items-center bg-white overflow-hidden rounded shadow">
+      <div className="w-72 md:w-96 flex items-center bg-white overflow-hidden rounded">
         <Input
           prefix={<SearchOutlined className="text-black" />}
           placeholder="Search news"

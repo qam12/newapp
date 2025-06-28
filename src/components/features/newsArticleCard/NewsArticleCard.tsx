@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Typography, Space } from "antd";
+import { Card, Typography } from "antd";
 import {
   HighlightOutlined,
   FileTextOutlined,
@@ -34,32 +34,29 @@ const NewsArticleCard: React.FC<ArticleCardProps> = ({
     >
       <Meta title={title} />
       <div className="mt-3 space-y-2">
-        <div className="flex justify-between mt-3">
-          {source && (
-            <Space>
-              <FileTextOutlined />
-              <Typography.Text className="text-gray-500">
-                {source}
-              </Typography.Text>
-            </Space>
-          )}
-          {author && (
-            <Space>
-              <HighlightOutlined />
-              <Typography.Text className="text-gray-500">
-                {author}
-              </Typography.Text>
-            </Space>
-          )}
-        </div>
-
+        {source && (
+          <div className="flex items-center w-full">
+            <FileTextOutlined className="mr-2" />
+            <Typography.Text className="truncate w-full text-gray-500" title={source}>
+              {source}
+            </Typography.Text>
+          </div>
+        )}
+        {author && (
+          <div className="flex items-center w-full">
+            <HighlightOutlined className="mr-2" />
+            <Typography.Text className="truncate w-full text-gray-500" title={author}>
+              {author}
+            </Typography.Text>
+          </div>
+        )}
         {publishTime && (
-          <Space>
-            <ClockCircleOutlined />
-            <Typography.Text className="text-gray-500">
+          <div className="flex items-center w-full">
+            <ClockCircleOutlined className="mr-2" />
+            <Typography.Text className="truncate w-full text-gray-500" title={publishTime}>
               {publishTime}
             </Typography.Text>
-          </Space>
+          </div>
         )}
       </div>
     </Card>

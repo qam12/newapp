@@ -1,5 +1,7 @@
 import { DropDownOptions, FilterConfig } from "../domain/types/types";
 
+export const ITEMS_PER_SOURCE = 5;
+
 export const sources: DropDownOptions[] = [
  { value: "guardian", label: "The Guardian" },
   { value: "nyt", label: "New York Times" },

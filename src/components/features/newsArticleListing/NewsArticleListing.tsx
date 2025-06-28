@@ -1,8 +1,8 @@
 import React from "react";
-import { Row, Col, Button, Spin, Typography, Empty } from "antd";
+import { Row, Col, Button, Typography, Empty } from "antd";
 import NewArticleCard from '../newsArticleCard/NewsArticleCard'; 
 import { useArticles } from "../../../hooks/useArticles"; 
-import { CategoryEnum, NewsCardListingProps } from "../../../domain/types/types";
+import { NewsCardListingProps } from "../../../domain/types/types";
 import CardSkeletonLoading from "../../common/cardSkeletonLoading/CardSkeletonLoading";
 
 const { Text } = Typography;
