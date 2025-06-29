@@ -1,14 +1,49 @@
+###  Environment Variables
 
+```
+REACT_APP_GUARDIAN_API_KEY=your_guardian_api_key  
+REACT_APP_NYT_API_KEY=your_nyt_api_key  
+REACT_APP_NEWS_API_KEY=your_news_api_key
+```
 
+In the project root, create a `.env` file with the following content:
 
+### Environment Troubleshooting
 
-## ⚙️ Docker Setup
+If you're facing issues running the app, here are some common checks:
 
-### 🧰 Prerequisites
+1. **Environment Variables Not Working**
+   - Ensure the `.env` file is placed in the **project root directory**.
+   - Make sure there are **no spaces around the `=`** sign.
+   - Do **not add quotes** around the API keys.
+   - Restart the development server after making changes to the `.env` file.
+
+2. **.env File Not Being Picked Up**
+   - Verify that the file is named **exactly** `.env` (no extensions or typos).
+   - Check that you're not committing it accidentally — it should be listed in `.gitignore`.
+
+3. **Build Fails or API Key Errors**
+   - Double-check that all required keys (`REACT_APP_*`) are present in `.env`.
+   - Ensure your API keys are **active and not expired**.
+   - Make sure you're using the correct prefix: `REACT_APP_` is required for React to expose them.
+
+4. **Still Not Working?**
+   - Try deleting `node_modules` and `package-lock.json`, then reinstall dependencies:
+     ```bash
+     rm -rf node_modules package-lock.json
+     npm install
+     ```
+
+5. **Check Console Logs**
+   - Open your browser's dev tools (F12) and check for any relevant error messages in the **Console** or **Network** tabs.
+
+##  Docker Setup
+
+###  Prerequisites
 
 - Ensure **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** is installed and running:
-  - 📦 [Download for macOS](https://docs.docker.com/desktop/install/mac-install/)
-  - 📦 [Download for Windows](https://docs.docker.com/desktop/install/windows-install/)
+  - [Download for macOS](https://docs.docker.com/desktop/install/mac-install/)
+  - [Download for Windows](https://docs.docker.com/desktop/install/windows-install/)
 
 ### 🔨 Build & Run the Docker Container
 
@@ -16,7 +51,7 @@
 docker-compose up --build
 ```
 
-## 🛠️ Docker Troubleshooting
+###  Docker Troubleshooting
 
 If you're having issues running the app with Docker, here are some common solutions:
 
