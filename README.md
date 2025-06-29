@@ -1,4 +1,99 @@
-###  Environment Variables
+#   News App
+
+**Live Demo**: [https://newapp-sable.vercel.app/](https://newapp-sable.vercel.app/)
+
+
+
+##  Project Overview
+
+This is a multi-source news app built with **React.js**, **TypeScript**, and **Redux Toolkit**, providing a rich and responsive reading experience. It pulls live articles from popular news providers like **NewsAPI**, **The Guardian**, and **New York Times**, unifying them into a single, personalized feed.
+
+
+##  Design & Experience
+
+- **Inspired by Flipboard**: Clean, magazine-style layout for intuitive reading.
+- **Mobile-First Approach**: Fully responsive and smooth on all screen sizes.
+- **Minimal & Functional UI**: Emphasis on category transitions, animations, and accessibility.
+
+
+##  Architecture & Development Patterns
+
+- **Container / Presentational Split**: Maintains separation of logic and UI.
+- **Service Layer**: All API logic is abstracted into dedicated clients.
+- **Custom Hooks**: Reusable logic through custom hooks.
+- **Redux Toolkit**: Scalable state with slices and async thunks.
+- **Performance Optimizations**: `React.memo`, `useCallback`, and `useMemo` used to prevent unnecessary renders.
+- **Modular Codebase**: Structured into clear domains: `components`, `hooks`, `store`, `api`.
+
+
+##  Navigation & Personalization
+
+###  Categories
+
+- Navigate across: **Business**, **Science**, **Health**, **News**, **Sports**, **Tech**, **Entertainment**, **My Feed**.
+- Active category is stored in Redux and implements filter cache across navigation.
+- Smooth transitions enhance experience on both web and mobile.
+
+###  Filters
+
+- Filter by **source**, **category**, and **author** using the filter drawer and personalized feed.
+- Choose from **NewsAPI**, **Guardian**, and **NYT**.
+
+###  Custom Feeds
+
+- Multi-source selection lets users create a unified stream.
+- Author/category filtering for deeper personalization.
+- Smart deduplication removes duplicate stories across sources.
+
+
+
+##  Search Functionality
+
+- Debounced input using a custom search hook to minimize API load.
+- Live results display as you type.
+
+
+
+##  Article Display
+
+###  Article List Features
+
+- Articles show: **title**, **image**, **author**, **source**, **publish time**.
+- Fully responsive list layout with smooth scroll and optimized render performance.
+
+###  Animated Loading
+
+- Skeleton components maintain layout structure while loading.
+- Ensures smooth transitions between loading and data-ready states.
+
+
+
+##  API Integrations
+
+- **Sources**: NewsAPI, The Guardian, NYT.
+- Articles are **normalized into a single type** for unified handling.
+- Handles **strict rate limits**, especially from NYT.
+- Graceful error handling with clear fallback UIs.
+
+
+
+##  Load More Pagination
+
+- Pagination is synced with source API responses.
+- Loading indicators show progress on the "Load More" button.
+- Handles API rate limits and displays fallback messages when limits are reached.
+
+
+##  Pending Tasks (Left Due to Time Constraints)
+
+- [ ] Add support for **favorite articles**
+- [ ] Enable **search history**
+- [ ] Add **unit & integration tests**
+- [ ] Implement **API response caching**
+- [ ] Add **fallback UI** for edge cases
+
+
+##  Environment Variables
 
 ```
 REACT_APP_GUARDIAN_API_KEY=your_guardian_api_key  
